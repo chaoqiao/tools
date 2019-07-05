@@ -1,4 +1,9 @@
+k8s requirement:
+
+Master node: 2cpu, >=1GB Memory
+
 k8s version: v1.15.0
+
 image list:
 chaoqiao/kube-proxy:v1.15.0
 chaoqiao/kube-apiserver:v1.15.0
