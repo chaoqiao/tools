@@ -31,7 +31,7 @@ net.bridge.bridge-nf-call-iptables = 1
 net.ipv4.ip_forward=1
 EOF
 sysctl --system
-swapoff -a
+swapoff -a && sed -i -e '/swap/ s/.*/#&/' /etc/fstab
 systemctl disable firewalld && systemctl stop firewalld
 ##################### step4 init k8s master ######################################
 kubeadm init --pod-network-cidr=10.244.0.0/16 --kubernetes-version=v1.15.0 --image-repository=index.docker.io/chaoqiao
