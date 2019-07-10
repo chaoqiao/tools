@@ -1,6 +1,7 @@
 #!/bin/bash
 # ubuntu microk8s install script
 # first install docker then pull images
+apt-get update && sudo apt-get install -y snapd
 snap install microk8s --classic --channel=1.15/stable
 microk8s.enable dns dashboard
 
