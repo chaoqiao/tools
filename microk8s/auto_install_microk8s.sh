@@ -2,8 +2,8 @@
 # ubuntu microk8s install script
 # first install docker then pull images
 apt-get update && sudo apt-get install -y snapd
-snap install microk8s --classic --channel=1.15/stable
-microk8s.enable dns dashboard
+snap install microk8s --classic --channel=1.15/stable && sleep 10
+/snap/bin/microk8s.start && /snap/bin/microk8s.enable dns dashboard
 
 docker pull chaoqiao/kubernetes-dashboard-amd64:v1.10.1
 docker pull chaoqiao/heapster-amd64:v1.5.2
