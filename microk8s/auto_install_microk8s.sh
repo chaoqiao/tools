@@ -32,12 +32,11 @@ docker save gcr.io/google_containers/k8s-dns-dnsmasq-nanny-amd64 > k8s-dns-dnsma
 docker save gcr.io/google_containers/k8s-dns-kube-dns-amd64 > k8s-dns-kube-dns-amd64.tar
 docker save gcr.io/google_containers/k8s-dns-sidecar-amd64 > k8s-dns-sidecar-amd64.tar
 
-microk8s.ctr -n k8s.io image import pause.tar
-microk8s.ctr -n k8s.io image import heapster-influxdb-amd64.tar
-microk8s.ctr -n k8s.io image import heapster-grafana-amd64.tar
-microk8s.ctr -n k8s.io image import kubernetes-dashboard-amd64.tar
-microk8s.ctr -n k8s.io image import heapster-amd64.tar
-microk8s.ctr -n k8s.io image import k8s-dns-dnsmasq-nanny-amd64.tar
-microk8s.ctr -n k8s.io image import k8s-dns-kube-dns-amd64.tar
-microk8s.ctr -n k8s.io image import k8s-dns-sidecar-amd64.tar
-
+/snap/bin/microk8s.ctr -n k8s.io image import pause.tar
+/snap/bin/microk8s.ctr -n k8s.io image import heapster-influxdb-amd64.tar
+/snap/bin/microk8s.ctr -n k8s.io image import heapster-grafana-amd64.tar
+/snap/bin/microk8s.ctr -n k8s.io image import kubernetes-dashboard-amd64.tar
+/snap/bin/microk8s.ctr -n k8s.io image import heapster-amd64.tar
+/snap/bin/microk8s.ctr -n k8s.io image import k8s-dns-dnsmasq-nanny-amd64.tar
+/snap/bin/microk8s.ctr -n k8s.io image import k8s-dns-kube-dns-amd64.tar
+/snap/bin/microk8s.ctr -n k8s.io image import k8s-dns-sidecar-amd64.tar
